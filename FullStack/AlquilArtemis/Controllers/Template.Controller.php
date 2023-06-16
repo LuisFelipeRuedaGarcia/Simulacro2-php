@@ -1,7 +1,7 @@
 <?php
 class TemplateController{
     public function Index(){
-        include "Views/Template.php";
+        include "Views/Pages/Template.php";
     }
 }
 ?>
