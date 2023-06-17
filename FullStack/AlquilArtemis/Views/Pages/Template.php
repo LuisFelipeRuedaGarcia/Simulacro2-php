@@ -56,10 +56,12 @@ $RoutesArray = array_filter($RoutesArray);
 </div>
 <!-- ./wrapper -->
 
+
 <!-- jQuery -->
 <script src="./Views/Assets/Plugins//jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="./Views/Assets/Plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <!-- AdminLTE App -->
 <script src="./Views/Assets/Plugins/AdminLTE/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->

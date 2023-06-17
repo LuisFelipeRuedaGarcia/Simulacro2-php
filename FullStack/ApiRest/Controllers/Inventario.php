@@ -10,7 +10,20 @@ switch ($_GET["op"]) {
         $datos = $Inventario->Fetch();
         echo json_encode($datos);
         break;
-    
+    case "GetbyId":
+        $datos = $Inventario->FetchOne($Body["IdInventario"]);
+        echo json_encode($datos);
+        break;
+    case "Insert":
+        $datos = $Inventario->Insert($Body["IdInventario"],
+        $Body["IdProducto"],
+        $Body["CantidadInicial"],
+        $Body["CantidadIngresos"],
+        $Body["CantidadSalidas"],
+        $Body["CantidadFinal"],
+        $Body["FechaInventario"],
+        $Body["TipoOperacion"]);
+        break;
     default:
         # code...
         break;
