@@ -4,7 +4,6 @@ class Inventario extends Conectar{
     
     public function __construct($DbCnx=""){
         parent::__construct($DbCnx);
-        
     }
     
     public function Fetch(){
