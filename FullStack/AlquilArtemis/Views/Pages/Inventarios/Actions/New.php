@@ -1,32 +1,29 @@
 <?php
 
-    echo 1;
-    $Url3 = "http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
+if(isset($_POST["Registrar"])){
 
-    $data = array(
-"IdInventario"=>333,
-"IdProducto"=>123,
-"CantidadInicial"=>333,
-"CantidadIngresos"=>333,
-"CantidadSalidas"=>333,
-"CantidadFinal"=>333,
-"FechaInventario"=>333,
-"TipoOperacion"=>333
-    );
-
-    $Curl3 = curl_init();
+$Url3 = "http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
+$data = array(
+"IdInventario"=>$_POST["IdInventario"],
+"IdProducto"=>$_POST["IdProducto"],
+"CantidadInicial"=>$_POST["CantidadInicial"],
+"CantidadIngresos"=>$_POST["CantidadIngresos"],
+"CantidadSalidas"=>$_POST["CantidadSalidas"],
+"CantidadFinal"=>$_POST["CantidadFinal"],
+"FechaInventario"=>$_POST["FechaInventario"],
+"TipoOperacion"=>$_POST["TipoOperacion"]
+  );
+var_dump($data);
+$Curl3 = curl_init();
 curl_setopt($Curl3, CURLOPT_URL, $Url3);
 curl_setopt($Curl3, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($Curl3, CURLOPT_POST, 1);
 curl_setopt($Curl3, CURLOPT_POSTFIELDS, json_encode($data));
-
-// Establecer la cabecera "Content-Type" como "application/json"
 curl_setopt($Curl3, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-
 $Output3 = json_decode(curl_exec($Curl3));
 curl_close($Curl3);
-
 var_dump($Output3);
+}
 ?>
 
 
@@ -58,7 +55,7 @@ var_dump($Output3);
             <br><label for="CantidadFinal">CantidadFinal</label>
             <input type="number" name="CantidadFinal" id="CantidadFinal">
             <br><label for="FechaInventario">FechaInventario</label>
-            <input type="date" name="FechaInventario" id="FechaInventario">
+            <input type="number" name="FechaInventario" id="FechaInventario">
             <br><label for="TipoOperacion">TipoOperacion</label>
             <input type="text" name="TipoOperacion" id="TipoOperacion">
         </div>

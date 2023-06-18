@@ -35,7 +35,7 @@ echo" </pre>--------------------------------------------------------------------
                   <tbody>
                   <?php
                     foreach ($Output as $Out) {
-                      echo $Out->IdInventario;
+
                     ?>
 
                     <tr data-widget="expandable-table" aria-expanded="false">
