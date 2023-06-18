@@ -64,26 +64,33 @@ private $TipoOperacion;
         }
     }
 
-    public function Insert(){
+    public function Insert($IdInventario,
+    $IdProducto,
+    $CantidadInicial,
+    $CantidadIngresos,
+    $CantidadSalidas,
+    $CantidadFinal,
+    $FechaInventario,
+    $TipoOperacion){
 try {
-    /*         $stm = "INSERT INTO Inventario(IdInventario, IdProducto, CantidadInicial, CantidadIngresos, CantidadSalidas, CantidadFinal, FechaInventario, TipoOperacion) VALUES(?,?,?,?,?,?,?,?)"; */
-    $stm=$this->DbCnx->prepare("INSERT INTO Inventario(IdInventario, IdProducto, CantidadInicial, CantidadIngresos, CantidadSalidas, CantidadFinal, FechaInventario, TipoOperacion) VALUES(?,?,?,?,?,?,?,?)");
-    /*        $stm->bindValue(1,$IdInventario);
+            $stm = "INSERT INTO Inventario(IdInventario, IdProducto, CantidadInicial, CantidadIngresos, CantidadSalidas, CantidadFinal, FechaInventario, TipoOperacion) VALUES(?,?,?,?,?,?,?,?)";
+            $stm=$this->DbCnx->prepare($stm);
+            $stm->bindValue(1,$IdInventario);
             $stm->bindValue(2,$IdProducto);
             $stm->bindValue(3,$CantidadInicial);
             $stm->bindValue(4,$CantidadIngresos);
             $stm->bindValue(5,$CantidadSalidas);
             $stm->bindValue(6,$CantidadFinal);
             $stm->bindValue(7,$FechaInventario);
-            $stm->bindValue(8,$TipoOperacion); */
-            $stm->execute([$this->IdInventario,
+            $stm->bindValue(8,$TipoOperacion);
+            $stm->execute(/* [$this->IdInventario,
         $this->IdProducto,
         $this->CantidadInicial,
         $this->CantidadIngresos,
         $this->CantidadSalidas,
         $this->CantidadFinal,
         $this->FechaInventario,
-        $this->TipoOperacion]);
+        $this->TipoOperacion] */);
             return $stm->FetchAll();
 } catch (PDOException $e) {
     return $e->getMessage();
@@ -91,7 +98,7 @@ try {
 
     }
 }
-$Body = array(
+/* $Body = array(
     "IdInventario"=>321,
     "IdProducto"=>4,
     "CantidadInicial"=>123,
@@ -100,11 +107,11 @@ $Body = array(
     "CantidadFinal"=>123,
     "FechaInventario"=>"2023-06-14",
     "TipoOperacion"=>"123O"
-);
-$inventario = new Inventario();
-var_dump($inventario->Fetch());
+); */
+/* $inventario = new Inventario();
+var_dump($inventario->Fetch()); */
 /* $inventario->Insert(321,4,321,321,321,321,"2023-06-14","operation"); */
-$inventario->IdInventario=321;
+/* $inventario->IdInventario=321;
     $inventario->IdProducto=123;
     $inventario->CantidadInicial=321;
     $inventario->CantidadIngresos=321;
@@ -113,5 +120,5 @@ $inventario->IdInventario=321;
     $inventario->FechaInventario=321;
     $inventario->TipoOperacion=321;
 
-$inventario->Insert();
+$inventario->Insert(); */
 ?>

@@ -4,14 +4,14 @@
     $Url3 = "http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
 
     $data = array(
-"IdInventario"=>321,
+"IdInventario"=>333,
 "IdProducto"=>123,
-"CantidadInicial"=>123,
-"CantidadIngresos"=>123,
-"CantidadSalidas"=>123,
-"CantidadFinal"=>123,
-"FechaInventario"=>123,
-"TipoOperacion"=>123
+"CantidadInicial"=>333,
+"CantidadIngresos"=>333,
+"CantidadSalidas"=>333,
+"CantidadFinal"=>333,
+"FechaInventario"=>333,
+"TipoOperacion"=>333
     );
 
     $Curl3 = curl_init();
