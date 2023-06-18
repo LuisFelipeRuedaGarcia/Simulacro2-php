@@ -1,17 +1,17 @@
 <?php
 
     echo 1;
-    $Url3 = "http://localhost/SkylAb-118/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
+    $Url3 = "http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
 
     $data = array(
 "IdInventario"=>321,
-"IdProducto"=>4,
+"IdProducto"=>123,
 "CantidadInicial"=>123,
 "CantidadIngresos"=>123,
 "CantidadSalidas"=>123,
 "CantidadFinal"=>123,
-"FechaInventario"=>"2023-06-14",
-"TipoOperacion"=>"123O"
+"FechaInventario"=>123,
+"TipoOperacion"=>123
     );
 
     $Curl3 = curl_init();

@@ -30,12 +30,12 @@ $RoutesArray = array_filter($RoutesArray);
     <!-- Content Header (Page header) -->
     <?php
 
-    if(!empty($RoutesArray[5])){
+    if(!empty($RoutesArray[4])){
 
 
-      if($RoutesArray[5] == "Inventarios"){
+      if($RoutesArray[4] == "Inventarios"){
 
-        include "./Views/Pages/".$RoutesArray[5]."/".$RoutesArray[5].".php";
+        include "./Views/Pages/".$RoutesArray[4]."/".$RoutesArray[4].".php";
       }
     }
     else{

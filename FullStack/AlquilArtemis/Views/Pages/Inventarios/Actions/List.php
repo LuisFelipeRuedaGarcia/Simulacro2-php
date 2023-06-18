@@ -1,6 +1,6 @@
 
 <?php
-$Url="http://localhost/SkylAb-118/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=GetAll";
+$Url="http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=GetAll";
 
 $Curl = curl_init();
 curl_setopt($Curl, CURLOPT_URL, $Url);

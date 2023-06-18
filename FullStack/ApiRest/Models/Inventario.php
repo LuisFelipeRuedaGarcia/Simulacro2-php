@@ -105,14 +105,13 @@ $inventario = new Inventario();
 var_dump($inventario->Fetch());
 /* $inventario->Insert(321,4,321,321,321,321,"2023-06-14","operation"); */
 $inventario->IdInventario=321;
-    $inventario->IdProducto=4;
+    $inventario->IdProducto=123;
     $inventario->CantidadInicial=321;
     $inventario->CantidadIngresos=321;
     $inventario->CantidadSalidas=321;
     $inventario->CantidadFinal=321;
-    $inventario->FechaInventario=1221321;
-    $inventario->TipoOperacion="OPt";
+    $inventario->FechaInventario=321;
+    $inventario->TipoOperacion=321;
 
 $inventario->Insert();
-echo "Echo";
 ?>
