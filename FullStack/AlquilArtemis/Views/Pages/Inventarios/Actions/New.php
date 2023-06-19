@@ -3,7 +3,7 @@
 if(isset($_POST["Registrar"])){
 
 $Url3 = "http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=Insert";
-$data = array(
+$data3 = array(
 "IdInventario"=>$_POST["IdInventario"],
 "IdProducto"=>$_POST["IdProducto"],
 "CantidadInicial"=>$_POST["CantidadInicial"],
@@ -13,12 +13,12 @@ $data = array(
 "FechaInventario"=>$_POST["FechaInventario"],
 "TipoOperacion"=>$_POST["TipoOperacion"]
   );
-var_dump($data);
+var_dump($data3);
 $Curl3 = curl_init();
 curl_setopt($Curl3, CURLOPT_URL, $Url3);
 curl_setopt($Curl3, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($Curl3, CURLOPT_POST, 1);
-curl_setopt($Curl3, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($Curl3, CURLOPT_POSTFIELDS, json_encode($data3));
 curl_setopt($Curl3, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 $Output3 = json_decode(curl_exec($Curl3));
 curl_close($Curl3);

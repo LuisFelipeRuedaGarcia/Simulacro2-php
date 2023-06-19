@@ -25,7 +25,8 @@ switch ($_GET["op"]) {
         $Body["TipoOperacion"]);
         break;
     default:
-        # code...
+        case "Delete":
+            $datos=$Inventario->Delete($Body["IdInventario"]);
         break;
 }
 

@@ -97,6 +97,13 @@ try {
 }
 
     }
+
+    public function Delete($IdInventario){
+        $stm="DELETE FROM Inventario WHERE IdInventario = ?";
+        $stm=$this->DbCnx->Prepare($stm);
+        $stm->bindValue(1,$IdInventario);
+        $stm->execute();
+    }
 }
 /* $Body = array(
     "IdInventario"=>321,

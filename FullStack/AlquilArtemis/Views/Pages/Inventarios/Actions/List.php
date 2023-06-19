@@ -30,6 +30,8 @@ echo" </pre>--------------------------------------------------------------------
                       <th>CantidadFinal</th>
                       <th>FechaInventario</th>
                       <th>TipoOperacion</th>
+                      <th>Editar</th>
+                      <th>Eliminar</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -47,6 +49,8 @@ echo" </pre>--------------------------------------------------------------------
                       <td><?=$Out->CantidadFinal?></td>
                       <td><?=$Out->FechaInventario?></td>
                       <td><?=$Out->TipoOperacion?></td>
+                      <td> <a href="./Views/Pages/Inventarios/Actions/Update.php?IdInventario=<?=$Out->IdInventario?>" >Editar</a></td>
+                      <td> <a href="./Views/Pages/Inventarios/Actions/Delete.php?IdInventario=<?=$Out->IdInventario?>" >Elminar</a></td>
                     </tr>
 
                     <tr class="expandable-body">
