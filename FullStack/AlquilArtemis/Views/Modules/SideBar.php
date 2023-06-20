@@ -77,6 +77,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/Simulacro2-php/FullStack/AlquilArtemis/Salidas" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Salidas
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
