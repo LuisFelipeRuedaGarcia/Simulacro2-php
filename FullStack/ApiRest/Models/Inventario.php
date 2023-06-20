@@ -125,6 +125,7 @@ try {
     TipoOperacion = ?
     WHERE IdInventario = ?";
     $stm=$this->DbCnx->prepare($stm);
+    $stm=$this->DbCnx->prepare($stm);
         $stm->bindValue(1,$IdInventario);
         $stm->bindValue(2,$IdProducto);
         $stm->bindValue(3,$CantidadInicial);
@@ -141,18 +142,18 @@ try {
     }
 }
 /* $Body = array(
-    "IdInventario"=>333,
-    "IdProducto"=>123,
+    "IdInventario"=>321,
+    "IdProducto"=>4,
     "CantidadInicial"=>123,
     "CantidadIngresos"=>123,
     "CantidadSalidas"=>123,
     "CantidadFinal"=>123,
-    "FechaInventario"=>123,
-    "TipoOperacion"=>123 
-);*/
+    "FechaInventario"=>"2023-06-14",
+    "TipoOperacion"=>"123O"
+); */
 /* $inventario = new Inventario();
-var_dump($inventario->Fetch());
-$inventario->Update(321,123,321,321,321,321,321,321,333); */
+var_dump($inventario->Fetch()); */
+/* $inventario->Insert(321,4,321,321,321,321,"2023-06-14","operation"); */
 /* $inventario->IdInventario=321;
     $inventario->IdProducto=123;
     $inventario->CantidadInicial=321;
@@ -163,6 +164,4 @@ $inventario->Update(321,123,321,321,321,321,321,321,333); */
     $inventario->TipoOperacion=321;
 
 $inventario->Insert(); */
-
-
 ?>

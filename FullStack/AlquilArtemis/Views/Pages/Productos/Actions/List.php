@@ -1,6 +1,6 @@
 
 <?php
-$Url="http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Inventario.php?op=GetAll";
+$Url="http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Producto.php?op=GetAll";
 
 $Curl = curl_init();
 curl_setopt($Curl, CURLOPT_URL, $Url);
@@ -12,8 +12,8 @@ echo" </pre>--------------------------------------------------------------------
 ?>
 
         <div class="row">
-          <div class="col-14">
-            <div class="card">
+          <div class="col-12">
+            <div class="card" style="width:100%">
               <div class="card-header">
                 <h3 class="card-title">Expandable Table</h3>
               </div>
@@ -22,14 +22,9 @@ echo" </pre>--------------------------------------------------------------------
                 <table class="table table-bordered table-hover">
                   <thead>
                     <tr>
-                      <th>IdInventario</th>
                       <th>IdProducto</th>
-                      <th>CantidadInicial</th>
-                      <th>CantidadIngresos</th>
-                      <th>CantidadSalidas</th>
-                      <th>CantidadFinal</th>
-                      <th>FechaInventario</th>
-                      <th>TipoOperacion</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
                       <th>Editar</th>
                       <th>Eliminar</th>
                     </tr>
@@ -41,16 +36,11 @@ echo" </pre>--------------------------------------------------------------------
                     ?>
 
                     <tr data-widget="expandable-table" aria-expanded="false">
-                      <td><?=$Out->IdInventario?></td>
                       <td><?=$Out->IdProducto?></td>
-                      <td><?=$Out->CantidadInicial?></td>
-                      <td><?=$Out->CantidadIngresos?></td>
-                      <td><?=$Out->CantidadSalidas?></td>
-                      <td><?=$Out->CantidadFinal?></td>
-                      <td><?=$Out->FechaInventario?></td>
-                      <td><?=$Out->TipoOperacion?></td>
-                      <td> <a href="./Views/Pages/Inventarios/Actions/Update.php?IdInventario=<?=$Out->IdInventario?>" >Editar</a></td>
-                      <td> <a href="./Views/Pages/Inventarios/Actions/Delete.php?IdInventario=<?=$Out->IdInventario?>" >Elminar</a></td>
+                      <td><?=$Out->Nombre?></td>
+                      <td><?=$Out->Precio?></td>
+                      <td> <a href="./Views/Pages/Productos/Actions/Update.php?IdProducto=<?=$Out->IdProducto?>" >Editar</a></td>
+                      <td> <a href="./Views/Pages/Productos/Actions/Delete.php?IdProducto=<?=$Out->IdProducto?>" >Elminar</a></td>
                     </tr>
 
                     <tr class="expandable-body">

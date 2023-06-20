@@ -33,7 +33,10 @@ $RoutesArray = array_filter($RoutesArray);
     if(!empty($RoutesArray[4])){
 
 
-      if($RoutesArray[4] == "Inventarios"){
+      if($RoutesArray[4] == "Inventarios" || 
+      $RoutesArray[4] == "Productos"
+      
+      ){
 
         include "./Views/Pages/".$RoutesArray[4]."/".$RoutesArray[4].".php";
       }
