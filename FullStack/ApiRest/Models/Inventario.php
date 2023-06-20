@@ -125,7 +125,6 @@ try {
     TipoOperacion = ?
     WHERE IdInventario = ?";
     $stm=$this->DbCnx->prepare($stm);
-    $stm=$this->DbCnx->prepare($stm);
         $stm->bindValue(1,$IdInventario);
         $stm->bindValue(2,$IdProducto);
         $stm->bindValue(3,$CantidadInicial);
