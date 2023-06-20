@@ -1,6 +1,6 @@
 
 <?php
-$Url="http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Empleado.php?op=GetAll";
+$Url="http://localhost/Simulacro2-php/FullStack/ApiRest/Controllers/Obra.php?op=GetAll";
 
 $Curl = curl_init();
 curl_setopt($Curl, CURLOPT_URL, $Url);
@@ -10,8 +10,9 @@ $Output = Json_decode(curl_exec($Curl));
 var_dump($Output);
 echo" </pre>----------------------------------------------------------------------------------------------------" */
 ?>
+
         <div class="row">
-          <div class="col-12">
+          <div class="col-14">
           <div class="card" style="width:100%;">
               <div class="card-header">
                 <h3 class="card-title">Expandable Table</h3>
@@ -21,9 +22,9 @@ echo" </pre>--------------------------------------------------------------------
                 <table class="table table-bordered table-hover">
                   <thead>
                     <tr>
-                      <th>IdEmpleado</th>
-                      <th>Username</th>
-                      <th>Password</th>
+                      <th>IdObra</th>
+                      <th>IdCliente</th>
+                      <th>Direccion</th>
                       <th>Editar</th>
                       <th>Eliminar</th>
                     </tr>
@@ -35,11 +36,11 @@ echo" </pre>--------------------------------------------------------------------
                     ?>
 
                     <tr data-widget="expandable-table" aria-expanded="false">
-                      <td><?=$Out->IdEmpleado?></td>
-                      <td><?=$Out->Username?></td>
-                      <td><?=$Out->Password?></td>
-                      <td> <a href="./Views/Pages/Empleados/Actions/Update.php?IdEmpleado=<?=$Out->IdEmpleado?>" >Editar</a></td>
-                      <td> <a href="./Views/Pages/Empleados/Actions/Delete.php?IdEmpleado=<?=$Out->IdEmpleado?>" >Elminar</a></td>
+                      <td><?=$Out->IdObra?></td>
+                      <td><?=$Out->IdCliente?></td>
+                      <td><?=$Out->Direccion?></td>
+                      <td> <a href="./Views/Pages/Obras/Actions/Update.php?IdObra=<?=$Out->IdObra?>" >Editar</a></td>
+                      <td> <a href="./Views/Pages/Obras/Actions/Delete.php?IdObra=<?=$Out->IdObra?>" >Elminar</a></td>
                     </tr>
 
                     <tr class="expandable-body">

@@ -13,7 +13,7 @@ echo" </pre>--------------------------------------------------------------------
 
         <div class="row">
           <div class="col-12">
-            <div class="card" style="width:100%">
+            <div class="card" style="width:100%;">
               <div class="card-header">
                 <h3 class="card-title">Expandable Table</h3>
               </div>
