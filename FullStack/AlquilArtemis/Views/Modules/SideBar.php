@@ -41,7 +41,7 @@
             <a href="/Simulacro2-php/FullStack/AlquilArtemis/Inventarios" class="nav-link">
               <i class="nav-icon far fa-user"></i>
               <p>
-                Inventario
+                Inventarios
               </p>
             </a>
           </li>
@@ -57,7 +57,7 @@
             <a href="/Simulacro2-php/FullStack/AlquilArtemis/Clientes" class="nav-link">
               <i class="nav-icon far fa-user"></i>
               <p>
-                Cliente
+                Clientes
               </p>
             </a>
           </li>
@@ -65,7 +65,15 @@
             <a href="/Simulacro2-php/FullStack/AlquilArtemis/Empleados" class="nav-link">
               <i class="nav-icon far fa-user"></i>
               <p>
-                Empleado
+                Empleados
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Simulacro2-php/FullStack/AlquilArtemis/Cotizaciones" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Cotizaciones
               </p>
             </a>
           </li>
