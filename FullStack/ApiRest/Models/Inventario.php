@@ -100,24 +100,59 @@ try {
 
     public function Delete($IdInventario){
         $stm="DELETE FROM Inventario WHERE IdInventario = ?";
-        $stm=$this->DbCnx->Prepare($stm);
+        $stm=$this->DbCnx->prepare($stm);
         $stm->bindValue(1,$IdInventario);
         $stm->execute();
     }
+
+    Public function Update($IdInventario,
+    $IdProducto,
+    $CantidadInicial,
+    $CantidadIngresos,
+    $CantidadSalidas,
+    $CantidadFinal,
+    $FechaInventario,
+    $TipoOperacion,
+    $OldId){
+try {
+    $stm="UPDATE Inventario SET IdInventario = ?,
+    IdProducto = ?,
+    CantidadInicial = ?,
+    CantidadIngresos = ?,
+    CantidadSalidas = ?,
+    CantidadFinal = ?,
+    FechaInventario = ?,
+    TipoOperacion = ?
+    WHERE IdInventario = ?";
+    $stm=$this->DbCnx->prepare($stm);
+        $stm->bindValue(1,$IdInventario);
+        $stm->bindValue(2,$IdProducto);
+        $stm->bindValue(3,$CantidadInicial);
+        $stm->bindValue(4,$CantidadIngresos);
+        $stm->bindValue(5,$CantidadSalidas);
+        $stm->bindValue(6,$CantidadFinal);
+        $stm->bindValue(7,$FechaInventario);
+        $stm->bindValue(8,$TipoOperacion);
+        $stm->bindValue(9,$OldId);
+    $stm->execute();
+} catch (PDOException $e) {
+    return $e->getMessage();
+}
+    }
 }
 /* $Body = array(
-    "IdInventario"=>321,
-    "IdProducto"=>4,
+    "IdInventario"=>333,
+    "IdProducto"=>123,
     "CantidadInicial"=>123,
     "CantidadIngresos"=>123,
     "CantidadSalidas"=>123,
     "CantidadFinal"=>123,
-    "FechaInventario"=>"2023-06-14",
-    "TipoOperacion"=>"123O"
-); */
+    "FechaInventario"=>123,
+    "TipoOperacion"=>123 
+);*/
 /* $inventario = new Inventario();
-var_dump($inventario->Fetch()); */
-/* $inventario->Insert(321,4,321,321,321,321,"2023-06-14","operation"); */
+var_dump($inventario->Fetch());
+$inventario->Update(321,123,321,321,321,321,321,321,333); */
 /* $inventario->IdInventario=321;
     $inventario->IdProducto=123;
     $inventario->CantidadInicial=321;
@@ -128,4 +163,6 @@ var_dump($inventario->Fetch()); */
     $inventario->TipoOperacion=321;
 
 $inventario->Insert(); */
+
+
 ?>

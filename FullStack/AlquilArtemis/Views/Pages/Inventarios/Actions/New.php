@@ -13,7 +13,7 @@ $data3 = array(
 "FechaInventario"=>$_POST["FechaInventario"],
 "TipoOperacion"=>$_POST["TipoOperacion"]
   );
-var_dump($data3);
+
 $Curl3 = curl_init();
 curl_setopt($Curl3, CURLOPT_URL, $Url3);
 curl_setopt($Curl3, CURLOPT_RETURNTRANSFER, 1);
@@ -22,7 +22,6 @@ curl_setopt($Curl3, CURLOPT_POSTFIELDS, json_encode($data3));
 curl_setopt($Curl3, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 $Output3 = json_decode(curl_exec($Curl3));
 curl_close($Curl3);
-var_dump($Output3);
 }
 ?>
 

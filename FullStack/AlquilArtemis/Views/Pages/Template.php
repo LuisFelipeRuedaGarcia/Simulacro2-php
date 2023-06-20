@@ -16,7 +16,7 @@ $RoutesArray = array_filter($RoutesArray);
   <!-- Theme style -->
   <link rel="stylesheet" href="./Views/Assets/Plugins/AdminLTE/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
 <div class="wrapper">
 
   <!-- Navbar -->

@@ -24,10 +24,23 @@ switch ($_GET["op"]) {
         $Body["FechaInventario"],
         $Body["TipoOperacion"]);
         break;
-    default:
         case "Delete":
             $datos=$Inventario->Delete($Body["IdInventario"]);
         break;
+        case "Update":
+            $datos=$Inventario->Update($Body["IdInventario"],
+            $Body["IdProducto"],
+            $Body["CantidadInicial"],
+            $Body["CantidadIngresos"],
+            $Body["CantidadSalidas"],
+            $Body["CantidadFinal"],
+            $Body["FechaInventario"],
+            $Body["TipoOperacion"],
+            $Body["OldId"]
+        );
+            break;
+    default:
+
 }
 
 ?>
