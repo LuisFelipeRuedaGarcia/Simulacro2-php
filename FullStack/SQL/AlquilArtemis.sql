@@ -1,4 +1,5 @@
 CREATE DATABASE AlquilArtemis;
+
 USE AlquilArtemis;
 
 CREATE TABLE Empleados(
@@ -56,9 +57,9 @@ CREATE TABLE Obras(
     Direccion VARCHAR(69),
     FOREIGN KEY (IdCliente) REFERENCES Clientes(IdCliente)
 );
-
+Drop TABLE DetalleSalidas;
 CREATE TABLE DetalleSalidas(
-    IdDetalle BIGINT PRIMARY KEY,
+    IdDetalleSalida BIGINT PRIMARY KEY,
     IdSalida BIGINT NOT NULL,
     IdProducto INT NOT NULL,
     IdObra BIGINT NOT NULL,
@@ -67,7 +68,7 @@ CREATE TABLE DetalleSalidas(
     CantidadPropia BIGINT,
     CantidadSubAlquilada BIGINT,
     ValorUnidad BIGINT,
-    FechaStandBye DATE,
+    FechaStandBy DATE,
     Estado VARCHAR(50),
     ValorTotal BIGINT,
     FOREIGN KEY (IdSalida) REFERENCES Salidas(IdSalida),
